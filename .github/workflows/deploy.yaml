@@ -17,12 +17,12 @@ jobs:
       - run: docker build -t tsoialeksei17537/react-test -f ./client/Dockerfile.dev ./client
       - run: docker run -e CI=true tsoialeksei17537/react-test npm test
 
-      - run: docker build -t tsoialeksei17537/multi-client ./client
-      - run: docker build -t tsoialeksei17537/multi-nginx ./nginx
-      - run: docker build -t tsoialeksei17537/multi-server ./server
-      - run: docker build -t tsoialeksei17537/multi-worker ./worker
+      - run: docker build -t tsoialeksei17537/complex-client ./client
+      - run: docker build -t tsoialeksei17537/complex-nginx ./nginx
+      - run: docker build -t tsoialeksei17537/complex-server ./server
+      - run: docker build -t tsoialeksei17537/complex-worker ./worker
 
-      - run: docker push tsoialeksei17537/multi-client
-      - run: docker push tsoialeksei17537/multi-nginx
-      - run: docker push tsoialeksei17537/multi-server
-      - run: docker push tsoialeksei17537/multi-worker
+      - run: docker push tsoialeksei17537/complex-client
+      - run: docker push tsoialeksei17537/complex-nginx
+      - run: docker push tsoialeksei17537/complex-server
+      - run: docker push tsoialeksei17537/complex-worker
